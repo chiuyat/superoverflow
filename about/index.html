@@ -26,6 +26,7 @@
 
         body {  background: #000000 }
 
+        /* take away left/right margin */
         .container-fluid {
           padding: 0px;
         }
@@ -36,6 +37,11 @@
             }
         }
 
+        a:hover
+        {
+          color:#505050;
+          text-decoration: none;
+        }
         .my-header 
         { 
           min-height: 100px;
@@ -46,38 +52,50 @@
           min-height: 100px;
           padding-top: 10px;
         }
-        a:hover
-        {
-          color:#505050;
-          text-decoration: none;
-        }
 
         .my-main
         {
           min-height: 150px;
           padding: 10px;
+          margin-bottom: 10px;
         }
 
         .my-footer 
         {
-           position:fixed;
-           left:0px;
-           bottom:0px;
-           height:20px;
-           width:100%;
-           text-align: center;
+          position:fixed;
+          left:0px;
+          bottom:0px;
+          height:20px;
+          width:100%;
+          text-align: center;
         }
 
-        .item-skills {
-            height: 30px;
-            color: #fff;
-            padding: 5px 10px 5px 5px;
-            margin-bottom: 5px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-size: 1.1em;
-            font-weight: 400;
+        .item-experience 
+        {
+          padding-left: 10px;
+        }
+
+        .item-skills 
+        {
+          height: 30px;
+          padding: 5px 10px 5px 5px;
+          margin-left: 10px;
+          margin-bottom: 5px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 1.2em;
+          font-weight: 500;
+        }
+
+        .item-lang 
+        {
+          padding-left: 10px;
+        }
+
+        .item-about
+        {
+          padding-left: 5px;
         }
 
       </style>
@@ -85,8 +103,11 @@
    </head>
    
    <body>
+
       <div class="container-fluid">
+
          <div class="row-fluid">
+            <!-- Name -->
             <div class="col-xs-12 col-md-6 my-header bg-color-0">
                <h1 class="fg-color-4"> 
                    <strong><p>CYRUS TANG</p></strong>
@@ -94,16 +115,16 @@
                <h4 class="fg-color-4">
                    IT Professional
                </h4>
+            </div> 
+            <!-- End of Name -->
 
-            </div>
-            <div class="col-xs-12 col-md-6 my-contact bg-color-0">
-              
+            <!-- Contact -->
+            <div class="col-xs-12 col-md-6 my-contact bg-color-0">              
                 <a class="fa fa-facebook-square fa-3x fg-color-4" href="http://facebook.com/chiuyat.tang"></a>
                 <a class="fa fa-linkedin-square fa-3x fg-color-4" href="https://hk.linkedin.com/in/tangchiuyat"></a>
                 <a class="fa fa-globe fa-3x fg-color-4" href="http://superoverflow.com"></a>
                 <a class="fa fa-github fa-3x fg-color-4" href="https://github.com/chiuyat"></a>
                 
-
                 <p class="fg-color-4">
                   <span class="fa fa-envelope-o"> me@superoverflow.com </span>
                </p>
@@ -112,52 +133,109 @@
                   <span class="fa fa-phone"> +44 (0)7985 793667 </span>
                </p>
             </div>
+            <!-- End of Contact -->
          </div>
+
 
         <div class="row-fluid">
           <div class="col-xs-12 my-about">
             <h3 class="fg-color-3"> # ABOUT </h3>
-            <p class="fg-color-2"> Can do. Know how. Experience in infrastructure setup, application development and supporting. Domain knowledge in Finance.</p>
+            <p class="fg-color-2 item-about">
+                Technology enthusiast. Experience in development as well as supporting. 
+                Born in Hong Kong. Currently in United Kingdom and available for opportunities.  
+            </p>
           </div>
-        </div>
+        </div> <!-- end of row 1 -->
 
         <!-- mobile : save contact -->
         <!-- web : qrcode -->
 
       <div class="row-fluid">
         <div class="col-xs-12 col-md-6 my-main fg-color-2">
-          <h3 class="fg-color-3"> # EXPERIENCE </h3>
-          <p class="fg-color-2">  (placeholder)
-          </p>
+          <h3 class="fg-color-3"> # EXPERIENCES </h3>
+           
+            <div class="list-group item-experience">
+                <h4 class="list-group-item-heading">Fidessa (RoyalBlue)
+                  <small class="fg-color-1">2014 Aug - 2015 Aug</small>
+                  </h4>
+                <p class="list-group-item-text">Trading Platform | Developer</p>
+            </div>
+            <div class="list-group item-experience">
+                <h4 class="list-group-item-heading">Morgan Stanley
+                  <small class="fg-color-1">2011 Aug - 2014 July</small>
+                </h4>
+                <p class="list-group-item-text">Asia Regulatory Application | Production Management Associate</p>
+            </div>
+            <div class="list-group item-experience">
+                <h4 class="list-group-item-heading">General Electric
+                <small class="fg-color-1">2010 July- 2010 Aug</small>
+                </h4>
+                <p class="list-group-item-text">Global Infrastructure Service | Summer Intern</p>
+            </div>
+          
         </div>
+
         <div class="col-xs-12 col-md-6 my-main">
           <h3 class="fg-color-3"> # SKILLS </h3>
-          <div class="item-skills bg-color-0" data-percent="1.00">Java</div>
-          <div class="item-skills bg-color-0" data-percent="0.60">C#</div>
-          <div class="item-skills bg-color-0" data-percent="0.80">Perl</div>
-          <div class="item-skills bg-color-0" data-percent="0.70">Python</div>
-          <div class="item-skills bg-color-0" data-percent="0.60">HTML</div>
+          <div class="item-skills bg-color-0 fg-color-4" data-percent="0.60">Java</div>
+          <div class="item-skills bg-color-0 fg-color-4" data-percent="0.60">C#</div>
+          <div class="item-skills bg-color-0 fg-color-4" data-percent="0.80">Perl</div>
+          <div class="item-skills bg-color-0 fg-color-4" data-percent="0.70">Python</div>
+          <div class="item-skills bg-color-0 fg-color-4" data-percent="0.60">HTML</div>
+          <div class="item-skills bg-color-0 fg-color-4" data-percent="0.60">Javascript</div>
+          <div class="item-skills bg-color-0 fg-color-4" data-percent="0.60">CSS</div>
+          <div class="item-skills bg-color-0 fg-color-4" data-percent="0.70">Unix Admin</div>
         </div>
-      </div>
-      </div>
+      </div> <!-- end of row 2 -->
+      
 
       <div class="row-fluid">
         <div class="col-xs-12 col-md-6 my-main fg-color-2">
           <h3 class="fg-color-3"> # EDUCATION </h3>
-          <p class="fg-color-2">  (placeholder) </p>
+
+            <div class="list-group item-experience">
+                <h4 class="list-group-item-heading">Hong Kong University of Science and Technology
+                  <small class="fg-color-1">2007 Sep - 2011 Jun</small>
+                  </h4>
+                <p class="list-group-item-text">Bachelor Degree in Electronic and Commounication Engineering 
+                  <small class="fg-color-1">First Class Honor</small>
+                </p>
+                <p class="list-group-item-text">Bachelor Degree in General Business Administration 
+                  <small class="fg-color-1">First Class Honor</small>
+                </p>
+            </div>
+            <div class="list-group item-experience">
+                <h4 class="list-group-item-heading">University of Auckland
+                  <small class="fg-color-1">2009 Jun - 2009 Nov </small>
+                </h4>
+                <p class="list-group-item-text">Exchange Programme</p>
+            </div>
+
+
         </div>
+      
         <div class="col-xs-12 col-md-6 my-main">
-          <h3 class="fg-color-3"> # AWARDS </h3>
-          <p class="fg-color-2">  (placeholder) </p>
+          <h3 class="fg-color-3"> # LANGUAGES </h3>
+          <p class="fg-color-2 item-lang">  
+            English <span class="badge fg-color-4 bg-color-1">fluent</span>
+          </p>
+          <p class="fg-color-2 item-lang">  
+            Mandarin <span class="badge fg-color-4 bg-color-1">fluent</span>
+          </p>
+          <p class="fg-color-2 item-lang">  
+            Cantonese <span class="badge fg-color-4 bg-color-1">native</span>
+          </p>
         </div>
-      </div>
-      </div>
+      </div> <!-- end of row 3 -->
+
+      </div> <!-- end of container -->
 
 
       <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>   
 
       <script type="text/javascript">
+        // http://kamsolutions.pl/projects/resume/
         var callback = function(){
         $('.item-skills').each(function(){
           newWidth = $(this).parent().width() * $(this).data('percent');
